@@ -1,0 +1,26 @@
+<div data-bb-type="screen" data-bb-effect="slide-left">
+
+	<div data-bb-type="image-list" data-bb-header-justify="left" >
+		<div data-bb-type="header" style="text-align:center;">Chat with a Designated Pin</div>
+	</div>
+	
+	<div data-bb-type="round-panel"> 
+	<div data-bb-type="panel-header">Some Notes</div>
+Slightly different from the previous Start Chat code, this allows you, the developer, to hardcode in a pin to chat with.<br>
+If the pin specified doesn't exist, the user of the app will be prompted to add them.<br><br>
+
+	<div data-bb-type="panel-header">The Code:</div>
+function startChatWith() {
+<br>	blackberry.invoke.invoke({
+<br>		action: 'bb.action.BBMCHAT',
+<br>		uri: 'pin:32693EF6'
+<br>	});
+<br>}
+
+
+<br><br>
+	<div data-bb-type="panel-header">Do it!</div>
+		<div data-bb-type="button" data-bb-style="stretch" onclick="startChatWith()">onclick="startChatWith()"</div>
+	</div>
+	<div data-bb-type="action-bar" data-bb-back-caption="Back"></div>
+</div>
