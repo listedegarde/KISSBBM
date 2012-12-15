@@ -6,21 +6,17 @@
 	
 	<div data-bb-type="round-panel"> 
 	<div data-bb-type="panel-header">Some Notes</div>
-Slightly different from the previous Start Chat code, this allows you, the developer, to hardcode in a pin to chat with.<br>
-If the pin specified doesn't exist, the user of the app will be prompted to add them.<br><br>
+The Invite To Download feature lets the user send a link to your app in App World to their BBM contacts. Nothing like free advertising!<br><br>
 
 	<div data-bb-type="panel-header">The Code:</div>
-function startChatWith() {
-<br>	blackberry.invoke.invoke({
-<br>		action: 'bb.action.BBMCHAT',
-<br>		uri: 'pin:32693EF6'
-<br>	});
+function invite() {
+<br>blackberry.bbm.platform.users.inviteToDownload()
 <br>}
 
 
 <br><br>
 	<div data-bb-type="panel-header">Do it!</div>
-		<div data-bb-type="button" data-bb-style="stretch" onclick="startChatWith()">onclick="startChatWith()"</div>
+		<div data-bb-type="button" data-bb-style="stretch" onclick="invite()">onclick="invite()"</div>
 	</div>
 	<div data-bb-type="action-bar" data-bb-back-caption="Back"></div>
 </div>
